@@ -22,6 +22,11 @@
             <version>3.141.59</version>
         </dependency>
 
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>4.4.3</version>
+        </dependency>
 
         <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
         <dependency>
@@ -60,11 +65,11 @@
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports-cucumber4-adapter -->
-        <dependency>
+        <!--<dependency>
             <groupId>com.aventstack</groupId>
             <artifactId>extentreports-cucumber4-adapter</artifactId>
             <version>1.2.1</version>
-        </dependency>
+        </dependency>-->
 
     </dependencies>
 

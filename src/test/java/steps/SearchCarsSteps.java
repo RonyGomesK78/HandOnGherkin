@@ -4,6 +4,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.testng.Assert;
 import pages.actions.CarSearchActions;
 import pages.actions.HomePageActions;
 import utils.SeleniumDriver;
@@ -16,8 +17,8 @@ public class SearchCarsSteps {
     CarSearchActions carSearchActions = new CarSearchActions();
 
     @Given("I am on the homepage {string} of Cars Guide Website")
-    public void I_am_on_the_homepage_of_cars_guide_website(String website) {
-        SeleniumDriver.openBrowser(website);
+    public void i_am_on_the_homepage_of_cars_guide_website(String string) {
+        SeleniumDriver.openBrowser(string);
     }
 
     @When("I move to the menu")
@@ -33,14 +34,14 @@ public class SearchCarsSteps {
         homePageActions.clickOnSearchCar();
     }
 
-    @And("select car brand as {brand} from AnyMade dropdown list")
-    public void select_car_brand_as_from_any_made_dropdown_list(String brand) {
-        carSearchActions.selectCarModel(brand);
+    @And("select car brand as {string} from AnyMade dropdown list")
+    public void select_car_brand_as_from_any_made_dropdown_list(String string) {
+        carSearchActions.selectCarMake(string);
     }
 
-    @And("select car model as {model} from Any Model dropdwon list")
-    public void select_car_model_as_from_any_model_dropdwon_list(String model) {
-        carSearchActions.selectCarMake(model);
+    @And("select car model as {string} from Any Model dropdown list")
+    public void select_car_model_as_from_any_model_dropdown_list(String string) {
+        carSearchActions.selectCarModel(string);
     }
 
     @And("select location as {string} from Any Location dropdown list")
@@ -60,14 +61,15 @@ public class SearchCarsSteps {
 
     @Then("I should see a list of searched cars")
     public void i_should_see_a_list_of_searched_cars() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        System.out.println("Car list found");
     }
 
     @And("the page title should be {string}")
     public void the_page_title_should_be(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
+        String actualTitle =  SeleniumDriver.getDriver().getTitle();
+
+        Assert.assertEquals(actualTitle, string);
     }
 
 

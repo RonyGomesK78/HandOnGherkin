@@ -21,7 +21,9 @@ public class HomePageActions {
     public void moveToBuyAndSaleMenu () {
 
         Actions actions = new Actions(SeleniumDriver.getDriver());
-        actions.moveToElement(homePageLocators.buyAndSaleSaleLink);
+        actions.moveToElement(homePageLocators.buyAndSaleSaleLink)
+                .perform();
+
     }
 
     public void clickOnSearchCar () {

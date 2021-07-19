@@ -10,36 +10,21 @@ import org.testng.annotations.BeforeClass;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 
 import io.cucumber.testng.CucumberOptions;
+import org.testng.annotations.DataProvider;
 
 
 @CucumberOptions(
-
-        plugin = {"json:target/RunCuce/cucumber.json", "html:target/RunCuce/cucumber.html", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
-        features = "src/test/resources/features",
+        features = {"src/test/resources/features"},
         glue = "steps",
-        tags = "@Search-cars"
-
+        tags = ""
 )
 
 public class RunCuke extends AbstractTestNGCucumberTests {
 
-
-    @BeforeClass
-
-    public static void setup() {
-
-        SimpleDateFormat sdf = new SimpleDateFormat("ddMMyyyy_hhmmss");
-
-        Date date = new Date();
-
-        String strDate = sdf.format(date);
-
-        String fileName = System.getProperty("user.dir") + "\\target\\Extent_Reports\\" + strDate;
-
-        File newFile = new File(fileName);
-
-        //ExtentCucumberAdapter.initiateExtentCucumberFormatter(newFile, false);
-
+    @Override
+    @DataProvider(parallel = true)
+    public Object[][] scenarios() {
+        return super.scenarios();
     }
 
 }
