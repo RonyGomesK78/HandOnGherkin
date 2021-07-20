@@ -29,5 +29,4 @@ public class HomePageActions {
     public void clickOnSearchCar () {
         homePageLocators.searchCarsLink.click();
     }
-
 }
