@@ -9,7 +9,7 @@ Feature: Acceptance testing to validate if Sell My Car is working fine.
       | Cars for Sale |
       | Sell my car   |
     And click on "Sell my car" link
-    And enter number plate as "123" from Your Number Plate dropdown list
+    And enter your number plate as "123" from AnyMade dropdown list
     And select state of car as "SA" from state of car registration dropdown list
     And click on Start my ad button
     And select car brand as "Ford" from AnyMade dropdown list
