@@ -26,4 +26,7 @@ public class SelectMyCarLocators {
 
     @FindBy(how = How.XPATH, using = "(//input)[7]")
     WebElement variant;
+
+    @FindBy(how = How.XPATH, using = "//button[@class='button selectCar--button primary']")
+    WebElement createYourFreeAddBtn;
 }
