@@ -7,26 +7,26 @@ import org.openqa.selenium.support.How;
 public class SelectMyCarLocators {
 
     @FindBy(how = How.XPATH, using = "(//input)[1]")
-    WebElement carMake;
+    public WebElement carMake;
 
     @FindBy(how = How.XPATH, using = "(//input)[2]")
-    WebElement carModel;
+    public WebElement carModel;
 
     @FindBy(how = How.XPATH, using = "(//input)[3]")
-    WebElement carYear;
+    public WebElement carYear;
 
     @FindBy(how = How.XPATH, using = "(//input)[4]")
-    WebElement carBodyType;
+    public WebElement carBodyType;
 
     @FindBy(how = How.XPATH, using = "(//input)[5]")
-    WebElement carTransmission;
+    public WebElement carTransmission;
 
     @FindBy(how = How.XPATH, using = "(//input)[6]")
-    WebElement fuelType;
+    public WebElement fuelType;
 
     @FindBy(how = How.XPATH, using = "(//input)[7]")
-    WebElement variant;
+    public WebElement variant;
 
     @FindBy(how = How.XPATH, using = "//button[@class='button selectCar--button primary']")
-    WebElement createYourFreeAddBtn;
+    public WebElement createYourFreeAddBtn;
 }
