@@ -15,8 +15,7 @@ import org.testng.annotations.DataProvider;
 
 @CucumberOptions(
         features = {"src/test/resources/features"},
-        glue = "steps",
-        tags = ""
+        glue = "steps"
 )
 
 public class RunCuke extends AbstractTestNGCucumberTests {

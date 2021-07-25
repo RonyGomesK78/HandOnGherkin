@@ -9,7 +9,10 @@ public class SellMyCarLocators {
     @FindBy(how = How.XPATH, using = "//input[@name='number_plate']")
     public WebElement numberPlate;
 
-    @FindBy(how = How.XPATH, using = "//input[@class='select--typeahead select--no-height']")
+    @FindBy(how = How.XPATH, using = "//div[@class='select--input']")
+    public WebElement divStateOfCar;
+
+    @FindBy(how = How.XPATH, using = "//div[@class='select--dropdown']")
     public WebElement stateOfCar;
 
     @FindBy(how = How.XPATH, using = "//button[@class='button button-full primary']")

@@ -8,7 +8,7 @@ Feature: Acceptance testing to validate if Search Cars is working fine.
       | Menu          |
       | Cars for Sale |
       | Sell My Car   |
-    And click on "Search Cars" link
+    And click on "Search Cars" link from the buy link
     And select car brand as "BMW" from AnyMade dropdown list
     And select car model as "1 Series" from Any Model dropdown list
     And select location as "NSW - New England" from Any Location dropdown list

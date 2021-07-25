@@ -24,13 +24,13 @@ public class SearchCarsSteps {
     @When("I move to the menu")
     public void i_move_to_the_menu(List<String> list) {
 
-        String menu = list.get(1);
-        System.out.println("Menu selected is : " + menu);
+        //String menu = list.get(1);
+        //System.out.println("Menu selected is : " + menu);
         homePageActions.moveToBuyAndSaleMenu();
     }
 
-    @And("click on {string} link")
-    public void click_on_link(String string) {
+    @And("click on {string} link from the buy link")
+    public void click_on_link_from_the_buy_link(String string) {
         homePageActions.clickOnSearchCar();
     }
 

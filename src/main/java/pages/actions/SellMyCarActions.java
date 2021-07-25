@@ -1,7 +1,12 @@
 package pages.actions;
 
+import io.cucumber.java.eo.Se;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+
 import pages.locators.SellMyCarLocators;
 import utils.SeleniumDriver;
 
@@ -17,15 +22,15 @@ public class SellMyCarActions {
     }
 
     public void enterCarPlate (String carPlate) {
-
-        Select selectPlate = new Select(sellMyCarLocators.numberPlate);
-        selectPlate.selectByVisibleText(carPlate);
+        sellMyCarLocators.numberPlate.sendKeys(carPlate);
     }
 
     public void selectStateOfCar (String stateOfCar) {
 
-        Select selectState = new Select(sellMyCarLocators.stateOfCar);
-        selectState.selectByVisibleText(stateOfCar);
+        //Select select = new Select(sellMyCarLocators.numberPlate);
+        //select.selectByVisibleText(stateOfCar);
+        sellMyCarLocators.stateOfCar.click();
+        
     }
 
     public void clickStartMyAd () {

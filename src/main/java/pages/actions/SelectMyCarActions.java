@@ -17,45 +17,35 @@ public class SelectMyCarActions {
     }
 
     public void selectCarMake (String carMake) {
-
-        Select selectCarMake = new Select(selectMyCarLocators.carMake);
-        selectCarMake.selectByVisibleText(carMake);
+        selectMyCarLocators.carMake.click();
     }
 
     public void selectCarModel (String carModel) {
-
-        Select selectCarModel= new Select(selectMyCarLocators.carModel);
-        selectCarModel.selectByVisibleText(carModel);
+        selectMyCarLocators.carModel.click();
     }
 
     public void selectYear(String year) {
-
-        Select selectYear = new Select(selectMyCarLocators.carYear);
-        selectYear.selectByVisibleText(year);
+        selectMyCarLocators.carYear.click();
     }
 
     public void selectBodyType (String bodyType) {
-
-        Select selectBodyType = new Select(selectMyCarLocators.carBodyType);
-        selectBodyType.selectByVisibleText(bodyType);
+        selectMyCarLocators.carBodyType.click();
     }
 
     public void selectTransmission (String transmission) {
-
-        Select selectTransmission = new Select(selectMyCarLocators.carTransmission);
-        selectTransmission.selectByVisibleText(transmission);
+        selectMyCarLocators.carTransmission.click();
     }
 
     public void selectFuelType (String fuelType) {
-
-        Select selectFuelType= new Select(selectMyCarLocators.fuelType);
-        selectFuelType.selectByVisibleText(fuelType);
+        selectMyCarLocators.fuelType.click();
     }
 
     public void selectVariant (String variant) {
+        selectMyCarLocators.variant.click();
+    }
 
-        Select selectVariant = new Select(selectMyCarLocators.variant);
-        selectVariant.selectByVisibleText(variant);
+    public void selectSeries (String series) {
+        selectMyCarLocators.series.click();
     }
 
     public void clickCreateAddBtn () {

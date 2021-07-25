@@ -23,10 +23,13 @@ public class HomePageActions {
         Actions actions = new Actions(SeleniumDriver.getDriver());
         actions.moveToElement(homePageLocators.buyAndSaleSaleLink)
                 .perform();
-
     }
 
     public void clickOnSearchCar () {
         homePageLocators.searchCarsLink.click();
+    }
+
+    public void clickOnSellCar () {
+        homePageLocators.carsForSaleLink.click();
     }
 }
